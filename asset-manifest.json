@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/E-ZineMH/static/css/main.5f42bf51.css",
+    "main.js": "/E-ZineMH/static/js/main.6d6ae55f.js",
+    "static/js/787.b0678281.chunk.js": "/E-ZineMH/static/js/787.b0678281.chunk.js",
+    "static/media/bg5.jpeg": "/E-ZineMH/static/media/bg5.6a85d8b4ad4fff3c78c0.jpeg",
+    "static/media/bg2.jpeg": "/E-ZineMH/static/media/bg2.e3321a7930ab9820e678.jpeg",
+    "static/media/bg3.jpeg": "/E-ZineMH/static/media/bg3.1538940754c24978c629.jpeg",
+    "static/media/img1.jpeg": "/E-ZineMH/static/media/img1.20a42435f65893d31a45.jpeg",
+    "static/media/img3.jpeg": "/E-ZineMH/static/media/img3.ae5bef944d9521145b0b.jpeg",
+    "static/media/img2.jpeg": "/E-ZineMH/static/media/img2.9d825a0139167058ce9c.jpeg",
+    "static/media/bg1.jpeg": "/E-ZineMH/static/media/bg1.968ab0c8442d28d55a10.jpeg",
+    "static/media/bg4.jpeg": "/E-ZineMH/static/media/bg4.8a4a8119b7de24f5af64.jpeg",
+    "static/media/maps.jpeg": "/E-ZineMH/static/media/maps.1370c26ffb7a64f79ecd.jpeg",
+    "static/media/dr.jpeg": "/E-ZineMH/static/media/dr.8531af2ad5c26fe0d469.jpeg",
+    "static/media/directors.jpeg": "/E-ZineMH/static/media/directors.0030d006917e69f1feb2.jpeg",
+    "index.html": "/E-ZineMH/index.html",
+    "main.5f42bf51.css.map": "/E-ZineMH/static/css/main.5f42bf51.css.map",
+    "main.6d6ae55f.js.map": "/E-ZineMH/static/js/main.6d6ae55f.js.map",
+    "787.b0678281.chunk.js.map": "/E-ZineMH/static/js/787.b0678281.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5f42bf51.css",
+    "static/js/main.6d6ae55f.js"
+  ]
+}
