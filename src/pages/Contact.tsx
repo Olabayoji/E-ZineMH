@@ -209,7 +209,7 @@ const Contact = (props: Props) => {
               </div>
               <div className=" relative mb-6">
                 <label
-                  className="   mb-1 sm:text-xs font-medium "
+                  className="   mb-1 text-xs md:text-sm font-medium "
                   htmlFor={"message"}
                 >
                   Message*
@@ -217,7 +217,7 @@ const Contact = (props: Props) => {
                 <Field
                   className={`${
                     !!(errors.message && touched.message) ? "bg-red-200" : ""
-                  } block w-full border h-12  pl-3 rounded focus:outline-none min-h-[40px] md:min-h-[80px]`}
+                  } block w-full border h-12  pl-3 rounded focus:outline-none min-h-[70px] md:min-h-[80px]`}
                   name={"message"}
                   id={"message"}
                   as="textarea"
