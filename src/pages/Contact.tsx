@@ -154,7 +154,7 @@ const Contact = (props: Props) => {
         </div>
       </div>
       {/* Get in touch */}
-      <section className="grid justify-center bg-white items-center mt-8 md:mt-20 w-full">
+      <div className="grid px-4 md:px-8 max-w-lg mx-auto bg-white items-center mt-8 md:mt-20 w-full">
         <h2 className=" font-medium text-xl md:text-3xl mb-4 md:mb-6 lg:mb-8 text-center">
           Get in touch
         </h2>
@@ -246,7 +246,7 @@ const Contact = (props: Props) => {
             message={showError ? showError : "Email sent"}
           />
         )}
-      </section>
+      </div>
     </div>
   );
 };
