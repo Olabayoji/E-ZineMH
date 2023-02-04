@@ -65,7 +65,7 @@ const SignUp = () => {
           email: result.user.email!,
           time_stamp: date.toISOString(),
         });
-        localStorage.setItem("email", result.user.email!);
+        sessionStorage.setItem("email", result.user.email!);
         // result.user.emailVerified && setAuthenticated(true);
         result.user.emailVerified && navigate("/");
       }
@@ -131,7 +131,7 @@ const SignUp = () => {
       ></div>
       <div className="max-w-[600px] w-full px-6 md:px-10 mx-auto grid items-center h-full">
         <div>
-          <header className="w-fit mb-4  md:mb-6">
+          <header className="w-fit mt-4 mb-4  md:mb-6">
             <Link className="flex justify-start items-center gap-x-2" to="/">
               <BiHealth className="w-4 h-4 md:w-6 md:h-6" />
               <h1 className="text-lg md:text-xl font-bold">E-zineMH</h1>

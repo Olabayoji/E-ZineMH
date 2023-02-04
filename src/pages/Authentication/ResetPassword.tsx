@@ -55,8 +55,8 @@ const ResetPassword = (props: Props) => {
   }
 
   return !success ? (
-    <div className="grid grid-rows-[auto_1fr] max-w-[95%] w-full mx-auto h-full min-h-screen items-center ">
-      <header className=" py-6">
+    <div className="md:grid md:grid-cols-[45%_55%] lg:grid-cols-[60%_40%] h-full  px-6 md:px-10 mx-auto">
+      <header className=" py-4">
         <Link className="flex justify-start items-center gap-x-2" to="/">
           <BiHealth className="w-4 h-4 md:w-6 md:h-6" />
           <h1 className="text-lg md:text-xl font-bold">E-zineMH</h1>

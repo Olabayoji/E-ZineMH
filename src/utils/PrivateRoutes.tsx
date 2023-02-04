@@ -4,6 +4,7 @@ import Navbar from "../components/Navigation/Navbar";
 import Contact from "../pages/Contact";
 import Gallery from "../pages/Gallery";
 import HomePage from "../pages/HomePage";
+import Overview from "../pages/Overview";
 
 export const PrivateRoutes = () => {
   return (
@@ -13,6 +14,7 @@ export const PrivateRoutes = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/overview" element={<Overview />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />

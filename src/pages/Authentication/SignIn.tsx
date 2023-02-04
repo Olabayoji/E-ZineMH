@@ -100,7 +100,7 @@ const SignIn = () => {
       ></div>
       <div className="max-w-[600px] w-full px-6 md:px-10 mx-auto grid items-center h-full">
         <div>
-          <header className="w-fit">
+          <header className="w-fit mt-4">
             <Link className="flex justify-start items-center gap-x-2" to="/">
               <BiHealth className="w-4 h-4 md:w-6 md:h-6" />
               <h1 className="text-lg md:text-xl font-bold">E-zineMH</h1>

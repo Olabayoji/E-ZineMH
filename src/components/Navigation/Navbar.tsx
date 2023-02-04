@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { BiHealth } from "react-icons/bi";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import { AuthContext } from "../../utils/AuthContext";
 import { auth } from "../../utils/firbase";
 import HamburgerMenu from "../UI/HamburgerMenu";
 import Sidebar from "./Sidebar";
@@ -10,6 +11,9 @@ type Props = {};
 const Navbar = (props: Props) => {
   const [showSideDrawer, setShowSideDrawer] = useState(false);
 
+  const { user } = useContext(AuthContext);
+
+  const admin = user?.email === "bayoji7@gmail.com";
   //   Toggle sideDrawer
   const toggleDrawer = () => {
     setShowSideDrawer((prev) => !prev);
@@ -33,7 +37,7 @@ const Navbar = (props: Props) => {
         show={showSideDrawer}
       />
       <nav
-        className={`fixed top-0 bg-white z-10 w-full flex justify-between items-center px-6 py-3 duration-500`}
+        className={`fixed top-0 bg-white  w-full flex justify-between items-center px-6 py-3 duration-500 z-[100]`}
       >
         <header>
           <Link className="flex justify-start items-center gap-x-2" to="/">
@@ -62,6 +66,18 @@ const Navbar = (props: Props) => {
               Contact
             </NavLink>
           </li>
+          {admin && (
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? activeClassName : navStyle
+                }
+                to="/overview"
+              >
+                Overview
+              </NavLink>
+            </li>
+          )}
         </ul>
 
         <button

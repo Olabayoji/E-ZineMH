@@ -13,14 +13,16 @@ const Toast = (props: Props) => {
       id="toast-warning"
       className={` ${
         props.success ? "bg-green-600 " : "bg-red-600 "
-      } fixed bottom-2 right-8 max-w-[96%] md:max-w-[48%] lg:max-w-[35%] flex items-center w-full p-4 text-white rounded-lg shadow 
+      } fixed bottom-2 right-8 max-w-[96%] z-50 md:max-w-[48%] lg:max-w-[35%] flex items-center w-full p-4 text-white rounded-lg shadow 
       `}
       role="alert"
     >
       <div
         className={`   ${
-          props.success ? "bg-lime-500 " : "text-orange-500"
-        } inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-orange-500 bg-orange-100 rounded-lg `}
+          props.success
+            ? "bg-lime-500 bg-green-600"
+            : "text-orange-500 bg-orange-100"
+        } inline-flex items-center justify-center flex-shrink-0 w-8 h-8  rounded-lg `}
       >
         {!props.success ? (
           <svg
