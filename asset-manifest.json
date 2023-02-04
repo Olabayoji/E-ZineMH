@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/E-ZineMH/static/css/main.5599c92c.css",
-    "main.js": "/E-ZineMH/static/js/main.9a431a96.js",
+    "main.css": "/E-ZineMH/static/css/main.2bdf7334.css",
+    "main.js": "/E-ZineMH/static/js/main.1f78bd21.js",
     "static/js/787.b0678281.chunk.js": "/E-ZineMH/static/js/787.b0678281.chunk.js",
     "static/media/bg5.jpeg": "/E-ZineMH/static/media/bg5.6a85d8b4ad4fff3c78c0.jpeg",
     "static/media/bg2.jpeg": "/E-ZineMH/static/media/bg2.e3321a7930ab9820e678.jpeg",
@@ -15,12 +15,12 @@
     "static/media/dr.jpeg": "/E-ZineMH/static/media/dr.8531af2ad5c26fe0d469.jpeg",
     "static/media/directors.jpeg": "/E-ZineMH/static/media/directors.0030d006917e69f1feb2.jpeg",
     "index.html": "/E-ZineMH/index.html",
-    "main.5599c92c.css.map": "/E-ZineMH/static/css/main.5599c92c.css.map",
-    "main.9a431a96.js.map": "/E-ZineMH/static/js/main.9a431a96.js.map",
+    "main.2bdf7334.css.map": "/E-ZineMH/static/css/main.2bdf7334.css.map",
+    "main.1f78bd21.js.map": "/E-ZineMH/static/js/main.1f78bd21.js.map",
     "787.b0678281.chunk.js.map": "/E-ZineMH/static/js/787.b0678281.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5599c92c.css",
-    "static/js/main.9a431a96.js"
+    "static/css/main.2bdf7334.css",
+    "static/js/main.1f78bd21.js"
   ]
 }
