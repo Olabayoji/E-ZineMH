@@ -88,7 +88,7 @@ const Contact = (props: Props) => {
       >
         <div className="layer"></div>
 
-        <div className="grid items-center justify-center z-50 text-white/90 px-4">
+        <div className="grid items-center justify-center z-10 text-white/90 px-4">
           <p className="text-2xl md:text-4xl font-light mb-2 text-center ">
             We'd love to hear from you
           </p>
@@ -154,7 +154,7 @@ const Contact = (props: Props) => {
         </div>
       </div>
       {/* Get in touch */}
-      <section className="grid justify-center bg-white items-center mt-8 md:mt-20">
+      <section className="grid justify-center bg-white items-center mt-8 md:mt-20 w-full">
         <h2 className=" font-medium text-xl md:text-3xl mb-4 md:mb-6 lg:mb-8 text-center">
           Get in touch
         </h2>
@@ -165,14 +165,17 @@ const Contact = (props: Props) => {
           innerRef={form}
         >
           {({ errors, touched, values }) => (
-            <Form id="contact-form" className=" flex flex-col justify-between">
+            <Form
+              id="contact-form"
+              className=" flex flex-col justify-between w-full"
+            >
               <div>
                 <div
                   className={`${
                     values.email !== ""
                       ? "md:grid-cols-2 lg:grid-cols-2 grid-cols-1 "
                       : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 "
-                  } grid  gap-x-4`}
+                  } grid w-full gap-x-4`}
                 >
                   <FormField
                     name="name"

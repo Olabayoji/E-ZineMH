@@ -154,7 +154,7 @@ const SignIn = () => {
                         <button
                           type="button"
                           onClick={() => setShowPassword(() => !showPassword)}
-                          className={`absolute right-4 top-[50%] `}
+                          className={`absolute right-4 top-[50%] -translate-y-[50%] `}
                         >
                           {!showPassword ? (
                             <AiOutlineEyeInvisible />

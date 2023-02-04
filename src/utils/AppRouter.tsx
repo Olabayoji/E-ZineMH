@@ -29,7 +29,7 @@ const AppRouter = () => {
     return <LoadingScreen />;
   }
   return (
-    <BrowserRouter basename="/E-ZineMH">
+    <BrowserRouter basename="/">
       <Routes>
         {user && user.emailVerified ? (
           <Route path="/*" element={<PrivateRoutes />} />

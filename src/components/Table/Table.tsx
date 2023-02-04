@@ -53,41 +53,42 @@ const Table = (props: Props) => {
 
   return (
     <>
-      <div className="px-5 pb-8 max-w-5xl mx-auto relative max-h-[50vh] h-full overflow-scroll bg-slate-100">
+      <div className=" bg-slate-100 px-5 pb-8 ">
         <h2 className="text-base md:text-xl mb-2 font-semibold sticky top-0 py-5 bg-slate-100 ">
           Recent Login
         </h2>
-
-        {!error && (
-          <table className="w-full pb-5  bg-slate-100 ">
-            <thead className="bg-gray-50 border-b-2 border-gray-200">
-              <tr>
-                <th className="p-3 text-sm font-semibold tracking-wide text-left">
-                  Email
-                </th>
-                <th className="w-24 p-3 text-sm font-semibold tracking-wide text-left">
-                  Time
-                </th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-100  h-full overflow-scroll">
-              {latest &&
-                latest.map((user: any, index: number) => (
-                  <TableRows
-                    key={index}
-                    email={user.email}
-                    time={user.time_stamp}
-                  />
-                ))}
-            </tbody>
-          </table>
-        )}
-        {error && (
-          <Toast
-            message="An error occurred. Try again later"
-            close={() => setError(false)}
-          />
-        )}
+        <div className="max-w-5xl mx-auto relative max-h-[50vh] h-full overflow-scroll">
+          {!error && (
+            <table className="w-full pb-5  bg-slate-100 ">
+              <thead className="bg-gray-50 border-b-2 border-gray-200">
+                <tr>
+                  <th className="p-3 text-sm font-semibold tracking-wide text-left">
+                    Email
+                  </th>
+                  <th className="w-24 p-3 text-sm font-semibold tracking-wide text-left">
+                    Time
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100  h-full overflow-scroll">
+                {latest &&
+                  latest.map((user: any, index: number) => (
+                    <TableRows
+                      key={index}
+                      email={user.email}
+                      time={user.time_stamp}
+                    />
+                  ))}
+              </tbody>
+            </table>
+          )}
+          {error && (
+            <Toast
+              message="An error occurred. Try again later"
+              close={() => setError(false)}
+            />
+          )}
+        </div>
       </div>
 
       {/* </div> */}

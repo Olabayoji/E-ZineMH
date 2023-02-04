@@ -70,7 +70,7 @@ const Overview = (props: Props) => {
       <div className="h-full relative md:max-h-[60vh] overflow-scroll">
         <Table />
       </div>
-      <div className=" px-5 pb-8 max-w-5xl w-full mx-auto relative  h-full overflow-scroll bg-slate-100">
+      <div className=" px-5 pb-8  relative  h-full overflow-scroll bg-slate-100">
         <h2 className="text-base md:text-xl mb-2 font-semibold sticky top-0 py-5  ">
           Upload Image
         </h2>
@@ -164,20 +164,20 @@ const Overview = (props: Props) => {
                 loading={loading}
                 type="submit"
               />
-              {(error || success) && (
-                <Toast
-                  success={success}
-                  close={() => {
-                    setError(null);
-                    setSuccess(false);
-                  }}
-                  message={error ? error : "Image uploaded successfully"}
-                />
-              )}
             </Form>
           )}
         </Formik>
       </div>
+      {(error || success) && (
+        <Toast
+          success={success}
+          close={() => {
+            setError(null);
+            setSuccess(false);
+          }}
+          message={error ? error : "Image uploaded successfully"}
+        />
+      )}
     </div>
   );
 };

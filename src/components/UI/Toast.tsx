@@ -13,7 +13,7 @@ const Toast = (props: Props) => {
       id="toast-warning"
       className={` ${
         props.success ? "bg-green-600 " : "bg-red-600 "
-      } fixed bottom-2 right-8 max-w-[96%] z-50 md:max-w-[48%] lg:max-w-[35%] flex items-center w-full p-4 text-white rounded-lg shadow 
+      } fixed left-1/2 transform -translate-x-1/2 md:right-2 md:-translate-x-0   bottom-2 max-w-[96%] z-50 md:max-w-[48%] lg:max-w-[35%] flex items-center w-full p-4 text-white rounded-lg shadow 
       `}
       role="alert"
     >
