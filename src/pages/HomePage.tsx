@@ -49,7 +49,7 @@ const HomePage = (props: Props) => {
             <h2 className="col-span-2 mb-4 font-bold text-lg md:text-xl text-center">
               ABOUT
             </h2>
-            <p>
+            <p className="mb-4 md:mb-0">
               Welcome to our Health Education Intervention Package aimed at
               addressing the impact of climate change on adolescents who have
               experienced perinatal depression. Climate change is one of the
