@@ -31,7 +31,6 @@ const ResetPassword = (props: Props) => {
 
   // onSubmit
   const onSubmit = async (values: { email: string }) => {
-    console.log("submitted");
     setLoading(true);
     try {
       const result = await sendPasswordResetEmail(auth, values.email);

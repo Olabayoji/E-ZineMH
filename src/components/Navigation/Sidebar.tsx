@@ -13,8 +13,8 @@ type Props = {
 };
 
 const Sidebar = (props: Props) => {
-  const { user } = useContext(AuthContext);
-  const admin = user?.email === "bayoji7@gmail.com";
+  const { admin } = useContext(AuthContext);
+
   return (
     <Modal onClose={props.toggle} show={props.show}>
       <aside

@@ -11,9 +11,8 @@ type Props = {};
 const Navbar = (props: Props) => {
   const [showSideDrawer, setShowSideDrawer] = useState(false);
 
-  const { user } = useContext(AuthContext);
+  const { user, admin } = useContext(AuthContext);
 
-  const admin = user?.email === "bayoji7@gmail.com";
   //   Toggle sideDrawer
   const toggleDrawer = () => {
     setShowSideDrawer((prev) => !prev);

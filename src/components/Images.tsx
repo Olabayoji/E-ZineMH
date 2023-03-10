@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import { getStorage, ref, deleteObject } from "firebase/storage";
 import { AiFillDelete } from "react-icons/ai";
 import LoadingSpinner from "./UI/LoadingSpinner";
+import { AuthContext } from "../utils/AuthContext";
 
 type Props = {
   src: string;
@@ -13,6 +14,7 @@ type Props = {
 };
 
 const Images = (props: Props) => {
+  const { admin } = useContext(AuthContext);
   return (
     <figure className={`hover:cursor-pointer boxInner relative`}>
       <img
@@ -29,14 +31,16 @@ const Images = (props: Props) => {
           </figcaption>
         </div>
       )}
-      <button
-        disabled={props.deleting}
-        type="button"
-        onClick={() => props.delete()}
-        className="absolute z-50 bottom-4 text-red-700 bg-white p-2 rounded-full right-4"
-      >
-        {props.deleting ? <LoadingSpinner /> : <AiFillDelete />}
-      </button>
+      {admin && (
+        <button
+          disabled={props.deleting}
+          type="button"
+          onClick={() => props.delete()}
+          className="absolute z-50 bottom-4 text-red-700 bg-white p-2 rounded-full right-4"
+        >
+          {props.deleting ? <LoadingSpinner /> : <AiFillDelete />}
+        </button>
+      )}
     </figure>
   );
 };

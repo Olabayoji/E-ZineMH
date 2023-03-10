@@ -19,7 +19,7 @@ const Table = (props: Props) => {
     try {
       const docRef = collection(db, "signIn");
       const docSnap = await getDocs(docRef);
-      console.log(docSnap);
+
       if (docSnap && docSnap.docs.length > 0) {
         docSnap.docs.map((doc) => list.push(doc.data()));
         // sort
@@ -37,7 +37,6 @@ const Table = (props: Props) => {
       return err;
     }
     setLoading(false);
-    console.log(latest);
   };
 
   useEffect(() => {

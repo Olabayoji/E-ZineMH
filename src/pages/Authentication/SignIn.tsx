@@ -48,7 +48,6 @@ const SignIn = () => {
         result.user.emailVerified && setAuthenticated(true);
       }
     } catch (error: any) {
-      console.log(error);
       setShowError(error.message);
     }
   };
@@ -71,7 +70,6 @@ const SignIn = () => {
       !result.user.emailVerified
         ? setShowError("Kindly verify your email")
         : setAuthenticated(true);
-      console.log(result);
     } catch (err: any) {
       switch (err.code) {
         case "auth/invalid-email":

@@ -31,10 +31,9 @@ const Gallery = (props: Props) => {
   const getImages = async () => {
     try {
       const images = await listAll(imageListRef);
-      console.log(images);
+
       if (images) {
         images.items.forEach((image) => {
-          console.log(image);
           getDownloadURL(image)
             .then((url) => {
               setPhotos((prev) => [
@@ -47,7 +46,6 @@ const Gallery = (props: Props) => {
               ]);
             })
             .catch((error) => {
-              console.log(error);
               setError("Error occurred");
             });
         });
@@ -80,12 +78,11 @@ const Gallery = (props: Props) => {
         setPhotos(photos.filter((photo) => photo.id !== id));
       })
       .catch((error) => {
-        console.log(error);
         setError(error);
       });
     setDeleting(false);
   };
-  console.log(photos);
+
   return (
     <div className="h-full mt-[64px] min-h-[90vh] px-4 md:px-8">
       <div className="wrap">

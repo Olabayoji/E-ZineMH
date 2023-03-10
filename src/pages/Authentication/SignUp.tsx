@@ -50,7 +50,6 @@ const SignUp = () => {
     const date = new Date();
     try {
       const result = await signInWithPopup(auth, googleProvider);
-      console.log(result);
       if (result) {
         await createUser({
           first_name: result.user.displayName!.split(" ")[0],
@@ -69,9 +68,7 @@ const SignUp = () => {
         // result.user.emailVerified && setAuthenticated(true);
         result.user.emailVerified && navigate("/");
       }
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 
   const onSubmit = async (values: {
