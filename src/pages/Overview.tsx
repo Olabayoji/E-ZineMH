@@ -1,4 +1,4 @@
-import { Form, Formik } from "formik";
+import { ErrorMessage, Field, Form, Formik } from "formik";
 import React, { useEffect, useState } from "react";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -35,6 +35,7 @@ const Overview = (props: Props) => {
   const initialValues = {
     caption: "",
     image: "",
+    gallery: "",
   };
 
   useEffect(() => {
@@ -43,13 +44,16 @@ const Overview = (props: Props) => {
 
   // onSubmit
   const onSubmit = async (
-    values: { caption: string; image: any },
+    values: { caption: string; image: any; gallery: string },
     { resetForm }: any
   ) => {
     const str = values.caption.replace(/\s+/g, "-").toLowerCase();
 
     try {
-      const imageRef = ref(storage, `images/${str + "_" + v4()}`);
+      const imageRef = ref(
+        storage,
+        `images/${values.gallery}/${str + "_" + v4()}`
+      );
       setLoading(true);
       const result = await uploadBytes(imageRef, values.image);
       if (result) {
@@ -158,6 +162,37 @@ const Overview = (props: Props) => {
                 type="text"
                 error={!!(errors.caption && touched.caption)}
               />
+              <div className=" relative mb-6">
+                <label
+                  className="   mb-1 text-xs md:text-sm font-medium "
+                  htmlFor={"gallery"}
+                >
+                  Gallery Section
+                </label>
+                <Field
+                  className={`${
+                    errors.gallery && touched.gallery ? "bg-red-200" : ""
+                  } "block w-full border h-12  pl-3 rounded focus:outline-none"`}
+                  name={"gallery"}
+                  id={"gallery"}
+                  as="select"
+                  // placeholder={props.placeholder}
+                >
+                  <option value="">Select</option>
+                  <option value="what-is-climate-change">
+                    What is climate change
+                  </option>
+                  <option value="how-did-climate-change-happen">
+                    How did climate change happen
+                  </option>
+                  <option value="how-can-we-help-using-mothers-mental-health">
+                    How can we help using mothers mental health
+                  </option>
+                </Field>
+                <p className="text-red-700 text-xs mt-1 ">
+                  <ErrorMessage name="gallery" />
+                </p>
+              </div>
               <PrimaryButton
                 text="Upload"
                 disable={loading}
@@ -188,6 +223,7 @@ const validation = Yup.object({
   caption: Yup.string()
     .required("Required")
     .min(5, "must be at least 5 characters"),
+  gallery: Yup.string().required("Required"),
   image: Yup.mixed()
     .required("Kindly select an image")
     .test(
