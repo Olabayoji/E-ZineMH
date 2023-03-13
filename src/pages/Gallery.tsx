@@ -34,10 +34,10 @@ const Gallery = (props: Props) => {
   const effectRan = useRef(false);
 
   const gallery1Ref = ref(storage, "images/what-is-climate-change/");
-  const gallery2Ref = ref(storage, "images/how-did-climate-change-happen");
+  const gallery2Ref = ref(storage, "images/how-did-climate-change-happen/");
   const gallery3Ref = ref(
     storage,
-    "images/how-can-we-help-using-mothers-mental-health"
+    "images/how-can-we-help-using-mothers-mental-health/"
   );
 
   // get images handler
@@ -87,7 +87,7 @@ const Gallery = (props: Props) => {
             images.items.forEach((image) => {
               getDownloadURL(image)
                 .then((url) => {
-                  setPhotos2((prev) => [
+                  setPhoto3((prev) => [
                     ...prev,
                     {
                       src: url,
