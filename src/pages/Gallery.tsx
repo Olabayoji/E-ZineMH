@@ -208,13 +208,13 @@ const Gallery = (props: Props) => {
         open={gallery1Index >= 0}
         index={gallery1Index}
         close={() => setGallery1Index(-1)}
-        slides={photos3}
+        slides={photos1}
       />
       <Lightbox
         open={gallery2Index >= 0}
         index={gallery2Index}
         close={() => setGallery2Index(-1)}
-        slides={photos3}
+        slides={photos2}
       />
       <Lightbox
         open={gallery3Index >= 0}
