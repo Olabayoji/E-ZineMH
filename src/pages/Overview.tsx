@@ -180,13 +180,16 @@ const Overview = (props: Props) => {
                 >
                   <option value="">Select</option>
                   <option value="what-is-climate-change">
-                    What is climate change
+                    What is climate change?
                   </option>
-                  <option value="how-did-climate-change-happen">
-                    How did climate change happen
+                  <option value="effects-of-climate-change">
+                    Effects of climate change?
                   </option>
-                  <option value="how-can-we-help-using-mothers-mental-health">
-                    How can we help using mothers mental health
+                  <option value="how-can-we-help-young-mothers-(self)">
+                    How can we help young mothers (self)?
+                  </option>
+                  <option value="how-can-we-help-young-mothers-(others)">
+                    How can we help young mothers (others)?
                   </option>
                 </Field>
                 <p className="text-red-700 text-xs mt-1 ">
@@ -228,8 +231,8 @@ const validation = Yup.object({
     .required("Kindly select an image")
     .test(
       "FILE_SIZE",
-      "File must not exceed 2MB.",
-      (value) => !value || (value && value.size <= 2000000)
+      "File must not exceed 3MB.",
+      (value) => !value || (value && value.size <= 3000000)
     )
     .test(
       "FILE_FORMAT",

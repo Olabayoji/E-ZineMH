@@ -36,7 +36,7 @@ const Images = (props: Props) => {
           disabled={props.deleting}
           type="button"
           onClick={() => props.delete()}
-          className="absolute z-50 bottom-4 text-red-700 bg-white p-2 rounded-full right-4"
+          className="absolute z-1 bottom-4 text-red-700 bg-white p-2 rounded-full right-4"
         >
           {props.deleting ? <LoadingSpinner /> : <AiFillDelete />}
         </button>
